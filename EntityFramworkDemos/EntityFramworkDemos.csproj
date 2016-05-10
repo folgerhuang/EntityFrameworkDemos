@@ -102,26 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\SampleDBScripts.sql" />
-    <Content Include="EmployeeModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EmployeeModel.Context.cs</LastGenOutput>
-      <DependentUpon>EmployeeModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="EmployeeModel.edmx.sql" />
-    <Content Include="EmployeeModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EmployeeModel.cs</LastGenOutput>
-      <DependentUpon>EmployeeModel.edmx</DependentUpon>
-    </Content>
     <Content Include="packages.config" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
-    <EntityDeploy Include="EmployeeModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EmployeeModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="EmployeeModel.edmx.diagram">
-      <DependentUpon>EmployeeModel.edmx</DependentUpon>
-    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,27 +136,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Department.cs">
-      <DependentUpon>EmployeeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Employee.cs">
-      <DependentUpon>EmployeeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Department.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeDBContext.cs" />
+    <Compile Include="EmployeeRepository.cs" />
     <Compile Include="Lesson1\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

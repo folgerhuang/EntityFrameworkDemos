@@ -13,7 +13,7 @@
     <form id="form1" runat="server" class="text-center col-sm-12 col-xs-12 col-md-6 col-lg-6 ">
     <div >
 
-        <asp:GridView ID="GridView1" HeaderStyle-BackColor="Green" CssClass="table table-responsive col-md-6 col-lg-6 col-sm-12 col-xs-12" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="EntityDataSource1">
+        <asp:GridView ID="GridView1" HeaderStyle-BackColor="Green" CssClass="table table-responsive col-md-6 col-lg-6 col-sm-12 col-xs-12" runat="server" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="ObjectDataSource1">
             <Columns>
                 <asp:BoundField DataField="ID" HeaderText="ID" ReadOnly="True" SortExpression="ID" />
                 <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
@@ -26,8 +26,7 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=EmployeeModelContainer" DefaultContainerName="EmployeeModelContainer" EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="Departments" Include="Employees">
-        </asp:EntityDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="getDepartments" TypeName="EntityFramworkDemos.EmployeeRepository"></asp:ObjectDataSource>
         
     </div>
     </form>
