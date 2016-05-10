@@ -148,3 +148,20 @@ Insert into Employees values ('John', 'Stanmore', 'Male', 80000, 1)
 
 GO
 
+
+
+/*
+
+data for Lesson5   Fist_Name =>First_Name
+
+*/
+Insert into Departments values ('IT', 'New York')
+Insert into Departments values ('HR', 'London')
+Insert into Departments values ('Payroll', 'Sydney')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle) values ('Mark', 'Hastings', 'Male', 60000, 1,'Software Engineer')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle) values ('Steve', 'Pound', 'Male', 45000, 3,'VP')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('Ben', 'Hoskins', 'Male', 70000, 1,'GM')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('Philip', 'Hastings', 'Male', 45000, 2,'Software Engineer')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('Mary', 'Lambeth', 'Female', 30000, 2,'VP')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('Valarie', 'Vikings', 'Female', 35000, 3,'GM')
+Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('John', 'Stanmore', 'Male', 80000, 1,'VP')
