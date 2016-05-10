@@ -26,7 +26,7 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
-        <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=SampleEntities" DefaultContainerName="SampleEntities" EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="Departments" Include="Employees">
+        <asp:EntityDataSource ID="EntityDataSource1" runat="server" ConnectionString="name=EmployeeModelContainer" DefaultContainerName="EmployeeModelContainer" EnableDelete="True" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="Departments" Include="Employees">
         </asp:EntityDataSource>
         
     </div>

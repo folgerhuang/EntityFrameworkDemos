@@ -102,15 +102,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\SampleDBScripts.sql" />
-    <Content Include="packages.config" />
-    <EntityDeploy Include="EmployeeMode.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EmployeeMode.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="EmployeeMode.edmx.diagram">
-      <DependentUpon>EmployeeMode.edmx</DependentUpon>
+    <Content Include="EmployeeModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EmployeeModel.Context.cs</LastGenOutput>
+      <DependentUpon>EmployeeModel.edmx</DependentUpon>
     </Content>
+    <Content Include="EmployeeModel.edmx.sql" />
+    <Content Include="EmployeeModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EmployeeModel.cs</LastGenOutput>
+      <DependentUpon>EmployeeModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="packages.config" />
     <Content Include="scripts\jquery-1.9.1.min.map" />
+    <EntityDeploy Include="EmployeeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmployeeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="EmployeeModel.edmx.diagram">
+      <DependentUpon>EmployeeModel.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,16 +134,6 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="EmployeeMode.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeMode.edmx</DependentUpon>
-      <LastGenOutput>EmployeeMode.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EmployeeMode.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeMode.edmx</DependentUpon>
-      <LastGenOutput>EmployeeMode.cs</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Lesson1\WebForm1.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
@@ -154,25 +155,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Department.cs">
-      <DependentUpon>EmployeeMode.tt</DependentUpon>
+      <DependentUpon>EmployeeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
-      <DependentUpon>EmployeeMode.tt</DependentUpon>
+      <DependentUpon>EmployeeModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeMode.Context.cs">
+    <Compile Include="EmployeeModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeMode.Context.tt</DependentUpon>
+      <DependentUpon>EmployeeModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeMode.cs">
+    <Compile Include="EmployeeModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeMode.tt</DependentUpon>
+      <DependentUpon>EmployeeModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeMode.Designer.cs">
+    <Compile Include="EmployeeModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeMode.edmx</DependentUpon>
+      <DependentUpon>EmployeeModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Lesson1\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
