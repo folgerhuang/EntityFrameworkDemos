@@ -165,3 +165,45 @@ Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  
 Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('Mary', 'Lambeth', 'Female', 30000, 2,'VP')
 Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('Valarie', 'Vikings', 'Female', 35000, 3,'GM')
 Insert into Employee (First_Name,LastName,Gender,Salary,DepartmentId,JobTitle)  values ('John', 'Stanmore', 'Male', 80000, 1,'VP')
+
+
+
+/*use procedure */
+
+use Sample
+Go
+
+CREATE TABLE Company(
+	id int IDENTITY primary key,
+	Name NVARCHAR(50),
+	Location NVARCHAR(50)
+)
+Go
+
+Create Procedure InsertCompany
+@ID int,
+@NAME NVARCHAR(50),
+@LOCATION NVARCHAR(50)
+AS
+Begin
+	insert into Company(Name,Location) values(@NAME,@LOCATION)
+END
+
+GO
+
+Create PROCEDURE UpdateCompany
+@ID int,
+@NAME NVARCHAR(50),
+@LOCATION NVARCHAR(50)
+AS
+BEGIN
+	update Company set Name=@NAME, Location=@LOCATION where id=@ID
+END
+Go
+
+Create PROCEDURE DelCompany
+@ID int
+AS
+BEGIN
+	Delete Company where id=@ID
+END
