@@ -13,7 +13,7 @@ namespace EntityFramworkDemos
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EmployeeDBContext>());
+            Database.SetInitializer(new EmployeeDBContextSeeder());
         }
 
         protected void Session_Start(object sender, EventArgs e)
